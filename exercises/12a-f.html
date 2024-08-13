@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      change();
+    " class="js-button">Add to cart</button>
+    <div class="js-para"></div>
+    <script>
+      /*
+      const add = function() {
+        console.log(2 + 3);
+      }
+
+      add();
+      add();
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+
+      runTwice(function() {
+        console.log('12b');
+      });
+
+      runTwice(add);
+      */
+
+      /*
+      function change() {
+        const inputElement = document.querySelector('.js-start-button');
+
+        inputElement.innerHTML = 'Loading...'
+        setTimeout(function() {
+          inputElement.innerHTML = 'Finished!'
+        }, 1000);
+      }
+      */
+      
+      let timeoutId;
+
+      function change() {
+        const inputElement = document.querySelector('.js-para');
+        inputElement.innerHTML = 'Added';
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function() {
+          inputElement.innerHTML = '';
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
